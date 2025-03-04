@@ -19,11 +19,17 @@ let mostrarTexto = document.getElementsByTagName('p');
 let botonEliminar = document.getElementById('eliminar');
 
 // Crear una función para agregar comentarios.
-botonEnviar.addEventListener('click', ()=> {
+botonEnviar.addEventListener('click', (e)=> {
+    e.preventDefault() // Prevenir el comportamiento predeterminado del formulario
     console.log("boton presionado");
     comentarios.push(escrito.value);
     mostrarTexto[0].innerHTML = comentarios;
+    limpiarCaja();
 })
+
+function limpiarCaja() {
+    document.querySelector('#comentario').value = '';
+}
 
 // Crear una función para eliminar comentarios.
 botonEliminar.addEventListener('click', ()=> {
