@@ -52,7 +52,13 @@ botonEliminar.addEventListener('click', ()=> {
     if(comentarios.length == 0)
         alert("Agrega un comentario");
     else{
-        comentarios.pop();
+        let numEliminar = parseInt(prompt("¿Qué número de comentario quieres eliminar? (1 a" + comentarios.length +")"));
+        if(isNaN(numEliminar) || numEliminar < 1 || numEliminar > comentarios.length){
+            alert("El comentario que quiere eliminar no existe");
+        }else {
+            comentarios.splice(numEliminar -1, 1);
+        }
+        //comentarios.pop();
         mostrarComentarios();
     }
 
