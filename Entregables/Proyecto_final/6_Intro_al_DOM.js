@@ -35,6 +35,10 @@ botonEnviar.addEventListener('click', (e)=> {
         console.log(comentarios);
         mostrarComentarios();
         limpiarCaja();
+        
+        // parte para local storage
+        let comentarios_JSON = JSON.stringify(comentarios); //lo pasamos a un string
+        localStorage.setItem("comentarios", comentarios_JSON); //almacenamos en localStorage
     }
 })
 
