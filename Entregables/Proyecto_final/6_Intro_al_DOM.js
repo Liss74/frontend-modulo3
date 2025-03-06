@@ -42,12 +42,19 @@ botonEnviar.addEventListener('click', (e)=> {
         console.log(comentarios);
         mostrarComentarios();
         limpiarCaja();
+        guardarArrayEnMemoria();
         
         // parte para local storage
-        let comentarios_JSON = JSON.stringify(comentarios); //lo pasamos a un string
-        localStorage.setItem("comentarios", comentarios_JSON); //almacenamos en localStorage
+        //let comentarios_JSON = JSON.stringify(comentarios); //lo pasamos a un string
+        //localStorage.setItem("comentarios", comentarios_JSON); //almacenamos en localStorage
     }
 })
+
+function guardarArrayEnMemoria(){
+    let comentarios_JSON = JSON.stringify(comentarios); //lo pasamos a un string
+localStorage.setItem("comentarios", comentarios_JSON); //almacenamos en localStorage
+return
+}
 
 // Función para mostrar los comentarios con fecha y hora
 function mostrarComentarios(){
@@ -68,6 +75,7 @@ botonEliminar.addEventListener('click', ()=> {
             alert("El comentario que quiere eliminar no existe");
         }else {
             comentarios.splice(numEliminar -1, 1);
+            guardarArrayEnMemoria();
         }
         //comentarios.pop();
         mostrarComentarios();
