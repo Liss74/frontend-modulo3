@@ -26,11 +26,12 @@ Base de datos que guarda pares de key y values para un dominio o página especí
 
 - Sintaxis:
 
-    - guardar un valor
+     - obtener el valor
+    localStorage.getItem("nombre_de_la_llave") 
+
+    - guardar un valor (se guarda aunque recargemos la página)
     localStorage.setItem("nombre_de_la_llave", "valor_de_la_llave")
 
-    - obtener el valor
-    localStorage.getItem("nombre_de_la_llave") 
 
 ## JSON
 
