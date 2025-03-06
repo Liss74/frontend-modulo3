@@ -18,6 +18,13 @@ let mostrarTexto = document.getElementById('lista');
 
 let botonEliminar = document.getElementById('eliminar');
 
+// Verificamos si hay comentarios guardados en localStorage y si los hay los mostramos
+if(localStorage.getItem("comentarios")){
+    let comentariosJSON = localStorage.getItem("comentarios"); //sacamos del localStorage
+    comentarios = JSON.parse(comentariosJSON); // convertimos de string a objeto
+    mostrarComentarios();
+}
+
 // Crear una función para agregar comentarios.
 botonEnviar.addEventListener('click', (e)=> {
     e.preventDefault() // Prevenir el comportamiento predeterminado del formulario
