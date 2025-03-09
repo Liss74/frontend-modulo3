@@ -23,9 +23,8 @@ body {
     font-size: 18px;
     color: white;
 }
-.slider {
-    width: 100%;
-}
+
+
 .options {
     text-align: left;
     font-size: 14px;
@@ -33,7 +32,42 @@ body {
 .options label {
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    gap: 8px; /* Espacio entre el checkbox y el texto */
+    cursor: pointer;
+}
+
+/* Estiliza la casilla del checkbox */
+.options input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Cambia el color de la casilla cuando está marcada */
+.options input[type="checkbox"]:checked {
+    background-color: #4caf50; /* Verde */
+    border-color: #4caf50;
+    position: relative;
+}
+
+/* Agrega una marca dentro del checkbox */
+.options input[type="checkbox"]:checked::after {
+    content: '✓'; /* Símbolo de check */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .strength {
     margin-top: 10px;
