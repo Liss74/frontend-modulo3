@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h3>Generador de contraseña</h3>
-        <input type="text" class="password-box" id="texto" placeholder="Mínimo 8 carácteres" oninput="verificacionContraseña();">
+        <input type="text" class="password-box" id="texto" placeholder="Mínimo 8 carácteres" oninput="verificacionContrasena();">
         <!--<input type="range" class="slider" id="barra" min="1" max="20" value="1"> -->
         <div class="options">
             <label><input type="checkbox" id="caracteres" disabled>Incluye 8 carácteres</label> 
@@ -19,7 +19,7 @@
             <label><input type="checkbox" id="simbolo" disabled> Incluye un símbolo (*,#,@)</label>
         </div>
         
-        <button onclick="guardarContraseña();" class="generate-btn" id="boton" disabled>Generar</button>
+        <button onclick="guardarContrasena();" class="generate-btn" id="boton" disabled>Generar</button>
     </div>
     <script src="7_Contraseña.js"></script>
 </body>

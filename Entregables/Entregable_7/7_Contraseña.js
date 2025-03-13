@@ -9,7 +9,7 @@ let botonGenerar = document.getElementById("boton");
 
 
 //confirmamos si la contraseña tiene los requisitos
-function verificacionContraseña(){
+function verificacionContrasena(){
     let texto = document.getElementById("texto").value;
 
     document.getElementById("caracteres").checked = texto.length >= 8;
@@ -19,7 +19,7 @@ function verificacionContraseña(){
     document.getElementById("simbolo").checked = /[*#@]/.test(texto);
 }
 
-function guardarContraseña(){
+function guardarContrasena(){
     let texto = document.getElementById("texto").value;
     contraseña.push(texto)
 }
