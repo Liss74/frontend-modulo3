@@ -3,7 +3,7 @@
 - ¿Qué es un objeto?
 
     - Dos tipos de objetos:
-        - Objetos literales (En otros lenguajes se les conoce como hashmaps/hashes o diccionarios)
+        - Objetos literales (En otros lenguajes se les conoce como hashmaps/hashes o diccionarios) *En esta sesión nos vamos a basar más en objetos literales*
         - Instancias de objetos (clases, OOP)
 
 - Creación de objetos

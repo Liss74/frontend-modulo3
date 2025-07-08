@@ -57,7 +57,7 @@ persona.edad = 34
 // Sintaxis
 
 /*let */ objeto = {
-    metodo: function(parametros) {
+    metodo: function(parametros) { //Cuando una función le pertenece a un objeto se le llama método, hay personas que le llaman función y tampoco está mal
         // Codigo
     }
 }
@@ -82,7 +82,7 @@ luis = {
 
 luis.saludar("Carlos")
 
-// Uso de this
+// Uso de this*
 
 // Sintaxis
 
@@ -118,6 +118,7 @@ console.log(result)
     propiedad3: "valor3",
 }
 
+//Object.keys extrae las propiedades de un objeto con comillas
 let propiedades = Object.keys(objeto) // ["propiedad1", "propiedad2", "propiedad3"]
 
 for(let i = 0; i < propiedades.length; i++) {
@@ -192,6 +193,7 @@ console.log(luis.calificaciones.matematicas)
     // ...
 }
 
+//Se pone primero la propiedad que quermos y después ponermos en qué objeto la queremos
 let { propiedad1 } = objeto
 console.log(propiedad1)
 
