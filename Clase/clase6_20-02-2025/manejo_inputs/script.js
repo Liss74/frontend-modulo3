@@ -35,9 +35,12 @@ let intereses = document.getElementById("intereses")
 let terminos = document.getElementById("terminos")
 */
 
+//vamos a extraer los valores de nuestro formulario
+
 let formulario = document.getElementById("formulario")
 formulario.addEventListener("submit", (event) => {
-    event.preventDefault()
+    event.preventDefault() //Es para evitar que se recargué 
+    // A continuación es la destructuración de un objeto visto hace dos clases, en este caso como todo está dentro de event.target se puede poner como:
     let { nombre,
         apellido,
         email, 
